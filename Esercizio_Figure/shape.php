@@ -31,7 +31,7 @@ if($shape == "triangolo"){
 		echo"<br>";
 	}
 }else if ($shape == "cornice"){
-	if($num > 2){
+	if($num > 2){// ho messo che la cornice deve avere una dimensione di massimo 3 
 	for($i=1; $i<=$num; $i++){
 		for($j=1; $j<=$num; $j++){
 		if($i != $num && $i != 1){
@@ -46,6 +46,8 @@ if($shape == "triangolo"){
 		}
 	echo"<br>";
 		}
+	}else{
+		echo "inserisci una dimensione piu' grande";
 	}
 }
 
