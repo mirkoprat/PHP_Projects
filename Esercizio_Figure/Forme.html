@@ -1,0 +1,54 @@
+<html>
+<head>
+<title> PROGRAMMA CON LE FIGURE </title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+h2 {
+  text-align: center;
+}
+</style>
+
+</head>
+
+<body>
+
+<h2> PROGRAMMA CON LE FIGURE </h2>
+
+
+<div class="container d-flex justify-content-center mt-5"> <!-- sposto la posizione  delle label e degli input al centro dello schermo -->
+<form action = "/Esercizio_Figure/shape.php" method="get">
+<!-- creo un riquadro con ogni input dove faccio scegliere all'utente quale figura vuole stampare, tutto racchiuso nella variabile shape
+che userò nel file php -->
+	<div>
+		<input type="radio" id="triangolo" name= "shape" value="triangolo">
+		<label for="triangolo"> Triangolo </label>
+	</div>
+	
+	<div>
+		<input type = "radio" id= "quadrato" name = "shape" value = "quadrato">
+		<label for="quadrato"> Quadrato </label>
+	</div>
+	
+	<div>
+		<input type = "radio" id = "triangolocontrario" name= "shape" value="triangolocontrario">
+		<label for= "triangolocontrario"> Triangolo Contrario </label>
+	</div>
+	
+	<div>
+		<input type = "radio" id = "cornice" name= "shape" value= "cornice">
+		<label for =" cornice"> Cornice </label>
+	</div>
+	
+	<br>
+	<label for="id"> Scrivi un numero </label><br>
+    <input type ="text" id= "id"; name="num" ><br><br>
+
+	<input type="Submit" name="Submit">
+	
+</form>
+</div>
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
