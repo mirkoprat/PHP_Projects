@@ -1,0 +1,88 @@
+<html>
+<head> 
+	<title> PROGRAMMA PER I NUMERI PRIMI </title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+	
+<!-- metto al centro della pagina il titolo -->
+<style>
+h2 {
+  text-align: center;
+}
+</style>
+</head>
+
+<body>
+
+<h2> NUMERI PRIMI </h2>
+
+
+<div class="container d-flex justify-content-center mt-5">  <!-- sposto la posizione  delle label e degli input al centro dello schermo -->
+<form action = "/Esercizio_Primi/primi.php" method = "post">
+
+
+	<input type="radio" id="scelta" name="tipo" value="intervalli" onclick="toggleInput('intervalli')">  
+	<!-- Uso onclick per richiamare la funzione JS
+    che mostra solo il blocco degli intervalli 
+    e nasconde l'altro. In questo modo 
+    il comportamento è immediato al click -->
+	
+	<label for="scelta"> Intervalli </label>
+	
+	
+	<input type="radio" id="scelta1" name="tipo" value="semplice"  onclick="toggleInput('semplice')">
+	<!-- Anche qui uso onclick per collegare direttamente l'evento al radio button: 
+    appena l'utente lo seleziona, mostro il blocco
+    della versione semplificata e nascondo l'altro -->
+											
+	<label for="scelta1"> Versione Semplificata </label> <br><br>
+
+<!-- Blocco riservato alla versione con intervalli.
+     Imposto display:none così all'avvio della pagina resta nascosto,
+     e verrà mostrato solo quando l'utente seleziona il radio "Intervalli", e l'id serve per la funzione di JS. -->
+	 
+	<div id="blocchi-intervalli" style="display:none;">
+	<label for="intervallo1"> Inserisci il primo intervallo </label><br>
+	<input type = "text" id = "intervallo1" name="intervallo1"> <br><br>
+	
+	<label for= "intervallo2"> Inserisci il secondo intervallo </label><br>
+	<input type = "text" id= "intervallo2" name="intervallo2"> <br><br>
+	
+	<input type="Submit" name="Submit"><br><br><br>
+	</div>
+	
+	
+<!-- Blocco riservato alla versione semplificata.
+     Anche qui uso display:none per non farlo vedere subito:
+     verrà mostrato soltanto quando l'utente clicca sul radio "Versione Semplificata". -->
+	<div id="blocchi-semplice" style="display:none;">
+	<label for="numero">Inserisci il numero dei numeri primi </label><br>
+	<input type="text" id="numero" name="num"><br><br>
+	
+	<input type = "Submit" name= "Submit">
+	</div>
+	
+</form>
+</div>
+
+<!-- ho deciso di usare il javascritp cosi che quando clicclo su un radio button, mi appaiono gli input e le label di ogni progamma singolo -->
+
+<script>
+function toggleInput(tipo) {
+    // nasconde entrambi
+    document.getElementById("blocchi-intervalli").style.display = "none";
+    document.getElementById("blocchi-semplice").style.display = "none";
+
+    // mostra quello selezionato
+    if (tipo === "intervalli") {
+        document.getElementById("blocchi-intervalli").style.display = "block";
+    } else if (tipo === "semplice") {
+        document.getElementById("blocchi-semplice").style.display = "block";
+    }
+}
+</script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
