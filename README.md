@@ -1,6 +1,8 @@
 # PHP_Projects
 The purpose of these projects was to create two programs. The first program, given a number N, generates different shapes using the * symbol. The second program has two functions:  Given two intervals, it prints the prime numbers between them.  Given a number N, it prints the first N prime numbers chosen by the user. 
 
+IMPORTANT: IF YOU WANT TO RUN THE PROGRAMS CORRETLY YOU HAVE TO PUT THE DIRECTORY WITH THE 2 FILES INTO HTDOCS!!!!!!!
+
 Screenshoot for the program of prime numbers :
 
 <img width="1058" height="473" alt="image" src="https://github.com/user-attachments/assets/6800ab60-0892-4b69-8204-6c932e72ae57" />
